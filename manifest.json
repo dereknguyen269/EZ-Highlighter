@@ -1,0 +1,25 @@
+{
+	"manifest_version": 2,
+	"name": "Quánh Dấu!",
+	"version": "0.1",
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["jquery-3.5.1.min.js", "jquery.highlight-5.js", "content.js"],
+			"css": ["styles.css"]
+		}
+	],
+	"browser_action": {
+		"default_icon": {
+			"16": "icon.png",
+			"24": "icon.png",
+			"32": "icon.png"
+		}
+		// "default_title": "Google Mail",
+		// "default_popup": "popup.html"
+	},
+	"permissions": ["activeTab", "contextMenus", "storage", "webNavigation"]
+}
